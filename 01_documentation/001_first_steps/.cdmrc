@@ -1,9 +1,8 @@
 terminals:
     [
         'pip install fastapi uvicorn --quiet && echo "✅ Dependencies ready!"',
-        'echo "💡 Run your server: uvicorn main:app --reload --port 3000"',
+        'echo "💡 Click Run Code to start the server"',
     ]
 tabs: ['main.py', 'README.md']
 playground-view: terminal-editor-browser
-browser-link: http://localhost:3000
-run-button: uvicorn main:app --reload --port 3000
+run-button: uvicorn main:app --reload --port 1337
