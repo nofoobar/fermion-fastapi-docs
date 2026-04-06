@@ -2,8 +2,7 @@
 
 ## What you'll build
 
-In this lab, you'll create your very first FastAPI application from scratch.
-By the end, you'll have a running web API with three endpoints.
+In this lab, you'll make your first FastAPI route return a proper JSON response.
 
 ---
 
@@ -19,39 +18,28 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-@app.get("/ping")
-async def ping():
-    return {"pong": True}
+@app.get("/")
+async def root():
+    return {"message": "Hello World"}
 ```
 
 Key concepts:
 - `FastAPI()` — creates the application instance
-- `@app.get("/path")` — registers a **GET** route at that path
-- The function below the decorator is called when someone hits that URL
+- `@app.get("/")` — registers a **GET** route at the root path
+- The function below the decorator runs when someone hits that URL
 - Returning a `dict` automatically becomes a JSON response
 
 ---
 
-## Your Tasks
+## Your Task
 
-Open `main.py` and complete the following:
+Open `main.py`. The route and function are already defined — you just need to complete the return statement.
 
-### Challenge 1 — Health check endpoint
-Create a `GET /` route that returns:
+### Challenge — Return hello world
+
+Make `GET /` return:
 ```json
-{"status": "ok"}
-```
-
-### Challenge 2 — Welcome message endpoint
-Create a `GET /hello` route that returns:
-```json
-{"message": "Welcome to FastAPI"}
-```
-
-### Challenge 3 — Info endpoint
-Create a `GET /info` route that returns:
-```json
-{"framework": "FastAPI", "language": "Python"}
+{"hello": "world"}
 ```
 
 ---
