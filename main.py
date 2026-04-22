@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-app = FastAPI(title="FastAPITutorial.com", docs_url="/")
+app = FastAPI(title="FastAPI", docs_url="/")
 
 
 @app.get("/message")
